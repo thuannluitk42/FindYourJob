@@ -4,9 +4,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Detail} from './src/Detail';
 import {Home} from './src/Home';
 
-type RootParams = {
-  Home: {hello: string};
-  Detail: undefined;
+export type RootParams = {
+  Home: {hello: string},
+  Detail: undefined | {title: string};
 };
 const Stack = createStackNavigator<RootParams>();
 const App = () => {
