@@ -24,7 +24,7 @@ export const style = StyleSheet.create({
     },
     subTitle : {
         marginTop: 16,
-        fontSize: 22,
+        fontSize: 20,
     },
     // Search
     containerSearch:{
@@ -35,6 +35,12 @@ export const style = StyleSheet.create({
     },
     mr8:{
         marginRight: 8,
+    },
+    mt16:{
+        marginTop: 16,
+    },
+    mt8:{
+        marginTop: 8,
     },
     inputSearch : {
         flexGrow:1,
@@ -63,13 +69,34 @@ export const style = StyleSheet.create({
         paddingBottom:4,
         paddingTop: 4,
         marginTop:8,
-        marginLeft:8
+        marginLeft:8,
     },
     visible : {
-        borderColor: '#ccc'
+        borderColor: '#ccc',
     },
     textVisible : {
-        color: '#ccc'
+        color: '#ccc',
+    },
+    // Popular Job
+    containerPopular :{
+        flexDirection:'row',
+        justifyContent: 'space-between',
+    },
+    titlePopular : {
+        fontSize: 20,
+    },
+    titleItemPopular : {
+        fontSize: 16,
+        color: '#ccc',
+    },
+    mainJobTitle:{
+        fontSize: 24,
+    },
+    colorGray:{
+        color: '#ccc',
+    },
+    bgLightGray:{
+        backgroundColor: '#f0eff6',
     }
 
 
