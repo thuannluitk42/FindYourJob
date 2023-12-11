@@ -1,8 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import ToolBar from './component/ToolBar';
+import Search from './component/Search';
 
 export default function HomePage() {
     return (<View>
-                <Text>HomePage</Text>
+                  <ToolBar/>
+                  <Search/>
             </View>)
 }

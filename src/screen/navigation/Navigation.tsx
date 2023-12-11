@@ -11,7 +11,7 @@ const Stack = createStackNavigator<RootParams>();
 export function MainNavigation (){
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{headerShown:false}}>
                 <Stack.Screen name={NAME_NAVIGATION.HOME} component={HomePage}/>
                 <Stack.Screen name={NAME_NAVIGATION.DETAIL} component={DetailPage}/>
             </Stack.Navigator>
