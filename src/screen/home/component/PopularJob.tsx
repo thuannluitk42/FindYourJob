@@ -19,36 +19,35 @@ export default function PopularJob(){
         city: 'Seattle',
     };
 
-    const [dataApi, setDataApi] = useState()
+    const [dataApi, setDataApi] = useState();
 
     useEffect(()=> {
         fetchPopularJob(params).then(data => {
-            setDataApi(data)
+            setDataApi(data);
         });
-    },[])
+    },[]);
+    console.log('ahihi: ' + dataApi);
 
-
-
-    const arrayItemJob = [
-        {
-            image: require('../../../assets/images/avatar.png'),
-            companyName: 'Grab Technology',
-            title: 'Senior NodeJS/React',
-            country: 'US',
-        },
-        {
-            image: require('../../../assets/images/avatar.png'),
-            companyName: 'MOMO Technology',
-            title: 'Senior NodeJS/React',
-            country: 'Finland',
-        },
-        {
-            image: require('../../../assets/images/avatar.png'),
-            companyName: 'MERKLE Technology',
-            title: 'Senior NodeJS/React',
-            country: 'VietNam',
-        },
-    ];
+    // const arrayItemJob = [
+    //     {
+    //         image: require('../../../assets/images/avatar.png'),
+    //         companyName: 'Grab Technology',
+    //         title: 'Senior NodeJS/React',
+    //         country: 'US',
+    //     },
+    //     {
+    //         image: require('../../../assets/images/avatar.png'),
+    //         companyName: 'MOMO Technology',
+    //         title: 'Senior NodeJS/React',
+    //         country: 'Finland',
+    //     },
+    //     {
+    //         image: require('../../../assets/images/avatar.png'),
+    //         companyName: 'MERKLE Technology',
+    //         title: 'Senior NodeJS/React',
+    //         country: 'VietNam',
+    //     },
+    // ];
     const renderItem = (item:any) => (
                 <View style={[style.ml30,style.mt16]}>
                     <View style={[style.btn, style.bgLightGray]}>
@@ -67,7 +66,7 @@ export default function PopularJob(){
                 </View>
                 <FlatList
                         horizontal
-                        data={arrayItemJob}
+                        data={dataApi}
                         renderItem={({item}) => renderItem(item)} />
             </View>
 

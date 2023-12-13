@@ -32,9 +32,9 @@ export const fetchPopularJob = (params: Params) => {
     const options = {
         params: {...params},
         headers: {
-          'X-RapidAPI-Key': '9c7fae566cmshbc8cac89e57fefbp133518jsn3e0e50eb1703',
-          'X-RapidAPI-Host': 'job-search-api1.p.rapidapi.com'
-        }
+            'X-RapidAPI-Key': '9c7fae566cmshbc8cac89e57fefbp133518jsn3e0e50eb1703',
+            'X-RapidAPI-Host': 'job-search-api1.p.rapidapi.com',
+          },    
       };
     const url = 'https://job-search-api1.p.rapidapi.com/v1/job-description-search';
     return axios.get(url,options).then(response => response.data);
