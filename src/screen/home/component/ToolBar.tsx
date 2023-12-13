@@ -1,11 +1,11 @@
-import { Image, Text, View } from "react-native";
-import React from "react";
-import { style } from "../Style";
+import { Image, Text, View } from 'react-native';
+import React from 'react';
+import { style } from '../Style';
 
 
 export default function ToolBar(){
-    const iconMenu = require("../../assets/icons/menu.png")
-    const iconAvatar = require("../../assets/images/avatar.png")
+    const iconMenu = require('../../../assets/icons/menu.png');
+    const iconAvatar = require('../../../assets/images/avatar.png');
     return (
         <View style = {style.containerToolBar}>
                 <View style = {style.toolbar}>
@@ -15,5 +15,5 @@ export default function ToolBar(){
                 <Text style = {style.subTitle}>Hello Adrian</Text>
                 <Text style = {style.title}>Find Your Perfect Job</Text>
         </View>
-    )
+    );
 }

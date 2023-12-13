@@ -39,8 +39,14 @@ export const style = StyleSheet.create({
     mt16:{
         marginTop: 16,
     },
+    mt24:{
+        marginTop: 24,
+    },
     mt8:{
         marginTop: 8,
+    },
+    ml30:{
+        marginLeft: 30,
     },
     inputSearch : {
         flexGrow:1,
@@ -97,7 +103,28 @@ export const style = StyleSheet.create({
     },
     bgLightGray:{
         backgroundColor: '#f0eff6',
-    }
-
+    },
+    // NearBy Job
+    containerNearBy :{
+        flexDirection:'row',
+        justifyContent: 'space-between',
+    },
+    titleNearBy : {
+        fontSize: 20,
+    },
+    containerItem :{
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    titleItemNearBy : {
+        fontSize: 16,
+        fontWeight: '500',
+    },
+    fl1:{
+        flex:1,
+    },
+    heightNearByJob: {
+        height: 300,
+    },
 
 });
