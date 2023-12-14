@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-//v1
+//v1 get info from JSearch
 // export type Params = {
 //     query: String,
 //     page: String,
@@ -8,19 +8,15 @@ import axios from 'axios';
 // }
 // export const fetchPopularJob = (params: Params) => {
 //     const options = {
-//         method: 'GET',
-//         url: 'https://jsearch.p.rapidapi.com/search',
 //         params: {...params},
 //         headers: {
-//           'X-RapidAPI-Key': '9c7fae566cmshbc8cac89e57fefbp133518jsn3e0e50eb1703',
-//           'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
-//         },
+//             'X-RapidAPI-Key': '9c7fae566cmshbc8cac89e57fefbp133518jsn3e0e50eb1703',
+//             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+//           }
 //       };
 //     const url = 'https://jsearch.p.rapidapi.com/search';
-//     return axios.get(url,options).then(response => response.data);
-
+//     return axios.get(url,options).then(response => response.data.data);
 // };
-
 //use for testing
 export type Params = {
     q: String,
@@ -34,9 +30,7 @@ export const fetchPopularJob = (params: Params) => {
         headers: {
             'X-RapidAPI-Key': '9c7fae566cmshbc8cac89e57fefbp133518jsn3e0e50eb1703',
             'X-RapidAPI-Host': 'job-search-api1.p.rapidapi.com',
-          },    
+          },
       };
     const url = 'https://job-search-api1.p.rapidapi.com/v1/job-description-search';
-    return axios.get(url,options).then(response => response.data);
-
-};
+    return axios.get(url,options).then(response => response.data)};

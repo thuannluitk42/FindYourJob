@@ -13,4 +13,4 @@ export type RootParams = {
 export type PropStackDetail = NativeStackNavigationProp<RootParams, NAME_NAVIGATION.DETAIL>;
 
   // TypeCheck Get param from route
-  export type PropRouteDetail = RouteProp<RootParams, NAME_NAVIGATION.DETAIL>;
+export type PropRouteDetail = RouteProp<RootParams, NAME_NAVIGATION.DETAIL>;

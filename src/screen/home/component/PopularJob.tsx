@@ -1,16 +1,22 @@
 import { Image, Text, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { style } from '../Style';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { Params, fetchPopularJob } from '../../../api/RapidApi';
+import { NAME_NAVIGATION } from '../../common/Const';
+import { PropStackDetail } from '../../navigation/Type';
+import { useNavigation } from '@react-navigation/native';
 
 export default function PopularJob(){
+
+    const navigation = useNavigation<PropStackDetail>();
+
     // v1
     // const params: Params = {
     //     query: 'Python developer in Texas, USA',
     //     page: '1',
-    //     num_pages: '1'
-    // }
+    //     num_pages: '1',
+    // };
     //use for testing
     const params: Params = {
         q: 'software engineer',
@@ -26,7 +32,8 @@ export default function PopularJob(){
             setDataApi(data);
         });
     },[]);
-    console.log('ahihi: ' + dataApi);
+
+    console.log(dataApi);
 
     // const arrayItemJob = [
     //     {
@@ -48,15 +55,20 @@ export default function PopularJob(){
     //         country: 'VietNam',
     //     },
     // ];
+
+    const onPressItem = (item:any) => {
+        navigation.push(NAME_NAVIGATION.DETAIL, {title:''})
+    };
+
     const renderItem = (item:any) => (
-                <View style={[style.ml30,style.mt16]}>
+                <TouchableOpacity onPress={()=>onPressItem(item)} style={[style.ml30,style.mt16]}>
                     <View style={[style.btn, style.bgLightGray]}>
-                        <Image source={item.image} style={style.icon}/>
+                        <Image source={item.employer_logo} style={style.icon}/>
                     </View>
-                    <Text style={[style.titleItemPopular,style.mt8]}>{item.companyName}</Text>
-                    <Text style={[style.mainJobTitle,style.mt16]}>{item.title}</Text>
-                    <Text style={style.colorGray}>{item.country}</Text>
-                </View>
+                    <Text style={[style.titleItemPopular,style.mt8]}>{item.employer_company_type}</Text>
+                    <Text style={[style.mainJobTitle,style.mt16]}>{item.job_title}</Text>
+                    <Text style={style.colorGray}>{item.job_country}</Text>
+                </TouchableOpacity>
     );
     return (
             <View style = {[style.mt16, style.ml8, style.mr8]}>
@@ -72,3 +84,7 @@ export default function PopularJob(){
 
     );
 }
+function PropRouteDtail(): any {
+    throw new Error('Function not implemented.');
+}
+
