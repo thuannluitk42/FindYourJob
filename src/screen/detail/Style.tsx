@@ -21,6 +21,10 @@ export const style = StyleSheet.create({
     mb16: {
         marginBottom: 16,
     },
+    p16:{
+        padding:16
+    }
+    ,
     btn: {
         padding: 8,
         borderRadius: 12,
@@ -51,5 +55,20 @@ export const style = StyleSheet.create({
     icon12: {
         width: 20,
         height: 20,
+    },
+    containerContent: {
+        flexDirection: 'row',
+        justifyContent:'space-evenly'
+    },
+    btnSelected:{
+        backgroundColor: '#2f2650',
+    },
+    textSelected:{
+        color: 'white'
+    },
+    containerItemContent: {
+        backgroundColor: 'white',
+        borderRadius:16,
+        padding:16
     }
 });
