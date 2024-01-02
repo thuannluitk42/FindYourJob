@@ -21,9 +21,35 @@ export const style = StyleSheet.create({
     mb16: {
         marginBottom: 16,
     },
-    btn : {
-        padding:8,
+    btn: {
+        padding: 8,
         borderRadius: 12,
-        backgroundColor: '#ebebf2'
+        backgroundColor: '#ebebf2',
+    },
+    logoCompany: {
+        width: 100,
+        height: 100,
+    },
+    titleJob: {
+        fontSize: 24,
+        fontWeight: '600',
+    },
+    fontBold: {
+        fontWeight: '500',
+    }
+    ,
+    secondaryColor: {
+        color: '#2a204a',
+    },
+    containerHeader: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    containerLocationCompany: {
+        flexDirection: 'row'
+    },
+    icon12: {
+        width: 20,
+        height: 20,
     }
 });
