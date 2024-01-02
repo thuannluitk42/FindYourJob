@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {View } from 'react-native';
+import ToolBar from '../home/component/ToolBar';
 
 export default function DetailPage() {
     return (<View>
-                <Text>DetailPage</Text>
+                <ToolBar/>
             </View>);
 }
