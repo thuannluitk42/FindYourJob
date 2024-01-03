@@ -1,11 +1,11 @@
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { TextInput } from 'react-native-gesture-handler';
 import { style } from '../Style';
 
 export default function Search(){
     const iconSearch = require('../../../assets/icons/search.png');
-    const filterContent = [
+    var contentSearch = [
         {
             title: 'Full-time',
             isCheck: true,
@@ -18,9 +18,21 @@ export default function Search(){
             title: 'Contractor',
             isCheck: false,
         },
-    ];
+    ]
+    const [filterContent, setFilterContent] = useState(contentSearch);
+    const onPressSearchItem = (indexSelected: number) => {
+        const newContentSearch = contentSearch.map((item, index) => {
+            if(index == indexSelected) {
+                item.isCheck = true
+            } else {
+                item.isCheck = false
+            }
+            return item
+        })
+        setFilterContent(newContentSearch)
+    }
     const renderFilter = () => filterContent.map((item, index) =>
-                                <TouchableOpacity key={index} style={[style.btnFilter, item.isCheck ? null : style.visible]}>
+                                <TouchableOpacity key={index} style={[style.btnFilter, item.isCheck ? null : style.visible]} onPress={() => onPressSearchItem(index)}>
                                     <Text style={item.isCheck ? null : style.textVisible}>{item.title}</Text>
                                 </TouchableOpacity>
                         );
