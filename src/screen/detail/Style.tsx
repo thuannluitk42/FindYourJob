@@ -22,7 +22,7 @@ export const style = StyleSheet.create({
         marginBottom: 16,
     },
     p16:{
-        padding:16
+        padding:16,
     }
     ,
     btn: {
@@ -50,7 +50,7 @@ export const style = StyleSheet.create({
         alignItems: 'center',
     },
     containerLocationCompany: {
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     icon12: {
         width: 20,
@@ -58,17 +58,37 @@ export const style = StyleSheet.create({
     },
     containerContent: {
         flexDirection: 'row',
-        justifyContent:'space-evenly'
+        justifyContent:'space-evenly',
     },
     btnSelected:{
         backgroundColor: '#2f2650',
     },
     textSelected:{
-        color: 'white'
+        color: 'white',
     },
     containerItemContent: {
         backgroundColor: 'white',
         borderRadius:16,
-        padding:16
+        padding:16,
+    },
+    itemTitle:{
+        color: '#2f2650',
+        fontSize: 20,
+        fontWeight: '500',
+    },
+    btnHeart : {
+        borderRadius: 16,
+        padding:16,
+        borderColor: '#ff7656',
+        borderWidth: 1
+    },
+    btnApplyForJob: {
+        backgroundColor: '#ff7656',
+        textAlign: 'center',
+        padding: 16,
+        borderRadius: 16,
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
