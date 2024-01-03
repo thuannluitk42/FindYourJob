@@ -88,6 +88,9 @@ export const style = StyleSheet.create({
         flexDirection:'row',
         justifyContent: 'space-between',
     },
+    containerItemPopular :{
+        width: 250
+    },
     titlePopular : {
         fontSize: 20,
     },

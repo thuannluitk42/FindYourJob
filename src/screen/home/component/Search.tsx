@@ -18,19 +18,19 @@ export default function Search(){
             title: 'Contractor',
             isCheck: false,
         },
-    ]
+    ];
     const [filterContent, setFilterContent] = useState(contentSearch);
     const onPressSearchItem = (indexSelected: number) => {
         const newContentSearch = contentSearch.map((item, index) => {
-            if(index == indexSelected) {
-                item.isCheck = true
+            if (index == indexSelected) {
+                item.isCheck = true;
             } else {
-                item.isCheck = false
+                item.isCheck = false;
             }
-            return item
-        })
-        setFilterContent(newContentSearch)
-    }
+            return item;
+        });
+        setFilterContent(newContentSearch);
+    };
     const renderFilter = () => filterContent.map((item, index) =>
                                 <TouchableOpacity key={index} style={[style.btnFilter, item.isCheck ? null : style.visible]} onPress={() => onPressSearchItem(index)}>
                                     <Text style={item.isCheck ? null : style.textVisible}>{item.title}</Text>
