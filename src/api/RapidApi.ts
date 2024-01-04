@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+//https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+
 //v1 get info from JSearch
 // export type Params = {
 //     query: String,

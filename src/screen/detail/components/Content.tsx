@@ -23,7 +23,6 @@ export default function Content(props: propsContent) {
 
     // react hook
     const [btnSelected, setBtnSelected] = useState(tabSelected.DESC);
-
     const jobHight = props.content;
     const [dataContent, setDataContent] = useState([]);
     // const params = useRoute<PropRouteDetail>().params;
