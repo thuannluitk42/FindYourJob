@@ -12,11 +12,18 @@ export default function NearBy(){
     const navigation = useNavigation<PropStackDetail>();
 
     //use for testing
+    // const params: Params = {
+    //     q: 'software engineer',
+    //     page: '1',
+    //     country: 'us',
+    //     city: 'Seattle',
+    // };
+
+    // use homework
     const params: Params = {
-        q: 'software engineer',
+        query: 'react',
         page: '1',
-        country: 'us',
-        city: 'Seattle',
+        num_pages: '12'
     };
 
     const [dataApi, setDataApi] = useState();

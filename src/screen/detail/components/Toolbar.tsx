@@ -1,11 +1,18 @@
 import React from 'react';
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import { style } from '../Style';
-import { useNavigation } from '@react-navigation/native';
-import { PropStackDetail } from '../../navigation/Type';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { PropStackDetail, PropRouteDetail } from '../../navigation/Type';
 
+export type propsToolbar = {
+    url:string,
+    level:string,
+    country: string,
+    jobtitle: string,
+    location: string
+}
 
-export default function Toolbar() {
+export default function Toolbar(props: propsToolbar) {
     const navigation = useNavigation<PropStackDetail>();
 
     const iconBack = require('../../../assets/icons/arrow.png');
@@ -27,8 +34,8 @@ export default function Toolbar() {
                     </TouchableOpacity>
                 </View>
                 <View style={[style.containerHeader, style.mt16]}>
-                    <Image style={style.logoCompany} source={logoCompany} />
-                    <Text style={[style.titleJob , style.secondaryColor, style.mt16]}>Lead Project Manager</Text>
+                    <Image style={style.logoCompany} source={{uri:props.url}} />
+                    <Text style={[style.titleJob , style.secondaryColor, style.mt16]}>{props.level}</Text>
                     <View style= {[style.mt16, style.containerLocationCompany]}>
                         <Text style={[style.secondaryColor,style.fontBold]}>Google</Text>
                         <Image style = {style.icon12} source={iconLocation} />

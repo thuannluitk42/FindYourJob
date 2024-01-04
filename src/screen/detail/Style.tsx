@@ -76,6 +76,11 @@ export const style = StyleSheet.create({
         fontSize: 20,
         fontWeight: '500',
     },
+    containerApplyForJob: {
+        position: 'absolute',
+        bottom: 0,
+        flexDirection: 'row'
+    },
     btnHeart : {
         borderRadius: 16,
         padding:16,

@@ -6,7 +6,17 @@ import { RouteProp } from '@react-navigation/native';
 
 export type RootParams = {
     Home: undefined,
-    Detail: undefined;
+    Detail: {
+      employer_logo: string,
+      job_publisher: string,
+      job_title: string,
+      job_country: string,
+      job_highlights : {
+        Qualifications: [],
+        Responsibilities: [],
+        Benefits: []
+      }
+    };
   };
 
   // TypeCheck Push to new page
